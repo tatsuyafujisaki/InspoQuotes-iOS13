@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05FBCA5B2DC744CC004CCB6D /* Premium Quotes.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 05FBCA5A2DC744CC004CCB6D /* Premium Quotes.storekit */; };
 		AD18A83E21285CAF00F6BF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18A83D21285CAF00F6BF05 /* AppDelegate.swift */; };
 		AD18A84321285CAF00F6BF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18A84121285CAF00F6BF05 /* Main.storyboard */; };
 		AD18A84521285CB000F6BF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD18A84421285CB000F6BF05 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FBCA5A2DC744CC004CCB6D /* Premium Quotes.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Premium Quotes.storekit"; path = "InspoQuotes/Premium Quotes.storekit"; sourceTree = SOURCE_ROOT; };
 		AD18A83A21285CAF00F6BF05 /* InspoQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspoQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD18A83D21285CAF00F6BF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD18A84221285CAF00F6BF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				AD18A8512128604B00F6BF05 /* README.md */,
+				05FBCA5A2DC744CC004CCB6D /* Premium Quotes.storekit */,
 				AD18A83C21285CAF00F6BF05 /* InspoQuotes */,
 				AD18A83B21285CAF00F6BF05 /* Products */,
 			);
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD18A84821285CB000F6BF05 /* LaunchScreen.storyboard in Resources */,
+				05FBCA5B2DC744CC004CCB6D /* Premium Quotes.storekit in Resources */,
 				AD18A84521285CB000F6BF05 /* Assets.xcassets in Resources */,
 				AD18A8532128604C00F6BF05 /* README.md in Resources */,
 				AD18A84321285CAF00F6BF05 /* Main.storyboard in Resources */,
@@ -296,13 +300,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = P4FA4M9P57;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.InspoQuotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.InspoQuotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,13 +318,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = P4FA4M9P57;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.londonappbrewery.InspoQuotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.InspoQuotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
