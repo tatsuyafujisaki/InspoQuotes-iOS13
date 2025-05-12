@@ -1,14 +1,9 @@
-//
-//  QuoteTableViewController.swift
-//  InspoQuotes
-//
-//  Created by Angela Yu on 18/08/2018.
-//  Copyright © 2018 London App Brewery. All rights reserved.
-//
-
+import StoreKit
 import UIKit
 
-class QuoteTableViewController: UITableViewController {
+class QuoteTableViewController: UITableViewController, SKPaymentTransactionObserver {
+    let productID = "com.example.InspoQuotes.PremiumQuotes"
+
     var quotesToShow = [
         "Our greatest glory is not in never falling, but in rising every time we fall. — Confucius",
         "All our dreams can come true, if we have the courage to pursue them. – Walt Disney",
@@ -67,7 +62,27 @@ class QuoteTableViewController: UITableViewController {
 
     // MARK: - In-App Purchase Methods
 
-    func buyPremiumQuotes() {}
+    func buyPremiumQuotes() {
+        if SKPaymentQueue.canMakePayments() {
+            let paymentRequest = SKMutablePayment()
+            paymentRequest.productIdentifier = productID
+            SKPaymentQueue
+                .default()
+                .add(paymentRequest)
+        } else {
+            print("User can't may payments")
+        }
+    }
+
+    func paymentQueue(
+        _ queue: SKPaymentQueue,
+        updatedTransactions transactions: [SKPaymentTransaction]
+    ) {
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+            } else if transaction.transactionState == .failed {}
+        }
+    }
 
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {}
 }
