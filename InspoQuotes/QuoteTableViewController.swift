@@ -24,6 +24,7 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SKPaymentQueue.default().add(self)
     }
 
     // MARK: - Table view data source
@@ -54,7 +55,7 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         didSelectRowAt indexPath: IndexPath
     ) {
         if indexPath.row == quotesToShow.count {
-            print("Buy quotes clicked")
+            buyPremiumQuotes()
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
@@ -80,7 +81,14 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
     ) {
         for transaction in transactions {
             if transaction.transactionState == .purchased {
-            } else if transaction.transactionState == .failed {}
+                SKPaymentQueue.default().finishTransaction(transaction)
+            } else if transaction.transactionState == .failed {
+                if let error = transaction.error {
+                    let errorDescription = error.localizedDescription
+                    print("Transaction failed due to error: \(errorDescription)")
+                }
+                SKPaymentQueue.default().finishTransaction(transaction)
+            }
         }
     }
 
